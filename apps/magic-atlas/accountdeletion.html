@@ -1,25 +1,195 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Magic Atlas Account Deletion</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magic Atlas Account Deletion</title>
+  <meta name="description" content="Request deletion of your Magic Atlas account." />
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --accent: #2563eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+
+    .brand {
+      margin-bottom: 20px;
+    }
+
+    .brand a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px 22px;
+      box-shadow: 0 10px 30px rgba(17, 24, 39, 0.05);
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0 0 16px;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .section {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.2rem;
+    }
+
+    .info {
+      display: grid;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .info-row {
+      background: #f9fafb;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 16px;
+    }
+
+    .label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    .footer-links {
+      margin-top: 28px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .footer-links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 14px;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        padding: 16px 12px 32px;
+      }
+
+      .card {
+        padding: 22px 16px;
+        border-radius: 16px;
+      }
+
+      h1 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="wrap">
+    <div class="brand">
+      <a href="https://mind-mirage.uk/apps/magic-atlas/privacy">Magic Atlas</a>
+    </div>
 
-<h1>Delete Your Magic Atlas Account</h1>
+    <main class="card">
+      <h1>Delete Your Magic Atlas Account</h1>
+      <p class="lead">
+        Magic Atlas allows users to sign in using Google Sign-In and Apple Sign-In via Firebase Authentication.
+      </p>
 
-<p>Magic Atlas allows users to sign in using Google Sign-In and Apple Sign-In via Firebase Authentication.</p>
+      <p>
+        If you would like to delete your account, you may request deletion by contacting support.
+      </p>
 
-<p>If you would like to delete your account, you may request deletion by contacting support.</p>
+      <section class="section">
+        <h2>How to request account deletion</h2>
 
-<h2>How to request account deletion</h2>
+        <div class="info">
+          <div class="info-row">
+            <span class="label">Email</span>
+            <a href="mailto:support@mind-mirage.uk">support@mind-mirage.uk</a>
+          </div>
 
-<p>Email: support@mind-mirage.uk</p>
+          <div class="info-row">
+            <span class="label">Subject</span>
+            Magic Atlas Account Deletion Request
+          </div>
 
-<p>Subject: Magic Atlas Account Deletion Request</p>
+          <div class="info-row">
+            <span class="label">Include</span>
+            Please include the email address used in the app so the account can be located.
+          </div>
+        </div>
+      </section>
 
-<p>Please include the email address used in the app so the account can be located.</p>
+      <section class="section">
+        <h2>What happens next</h2>
+        <p>
+          After the request is reviewed and verified, the Magic Atlas account and associated app data linked to that account will be permanently deleted.
+        </p>
+        <p>
+          Requests are typically processed within 7 days.
+        </p>
+      </section>
 
+      <div class="footer-links">
+        <a href="https://mind-mirage.uk/apps/magic-atlas/privacy">Privacy Policy</a>
+        <a href="https://mind-mirage.uk/apps/magic-atlas/data-deletion">Data Deletion</a>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
