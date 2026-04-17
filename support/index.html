@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support</title>
+
+<style>
+body {
+  font-family: -apple-system, system-ui, sans-serif;
+  background: #0f1115;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+p {
+  text-align: center;
+  color: #aaa;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+input, select, textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #1c1f26;
+  color: white;
+  font-size: 14px;
+}
+textarea {
+  min-height: 120px;
+}
+button {
+  padding: 14px;
+  border: none;
+  border-radius: 999px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.9;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>Support</h1>
+<p>Need help with one of our apps? Fill in the form below.</p>
+
+<form action="https://formspree.io/f/YOUR_ID" method="POST">
+
+<input type="text" name="name" placeholder="Name" required>
+<input type="email" name="email" placeholder="Email address" required>
+
+<select name="app" id="appSelect" required>
+<option value="">Select App</option>
+<option>Magic Atlas</option>
+<option>Garage Atlas</option>
+<option>Pay Atlas</option>
+<option>Echo Atlas</option>
+<option>Spin The Wheel</option>
+<option>Coin Flip & Dice Roll</option>
+</select>
+
+<select name="issue">
+<option>Bug / crash</option>
+<option>Purchase issue</option>
+<option>Subscription / Pro issue</option>
+<option>Account issue</option>
+<option>Progress issue</option>
+<option>Feature request</option>
+<option>Other</option>
+</select>
+
+<input type="text" name="device" placeholder="Device (optional)">
+<input type="text" name="version" placeholder="App version (optional)">
+
+<textarea name="message" placeholder="Describe your issue..." required></textarea>
+
+<button type="submit">Send support request</button>
+
+</form>
+
+<p style="margin-top:20px;">Response time: usually within 48 hours.</p>
+
+</div>
+
+<script>
+// Auto-select app from URL like ?app=magic-atlas
+const params = new URLSearchParams(window.location.search);
+const appParam = params.get("app");
+
+if (appParam) {
+  const map = {
+    "magic-atlas": "Magic Atlas",
+    "garage-atlas": "Garage Atlas",
+    "pay-atlas": "Pay Atlas",
+    "echo-atlas": "Echo Atlas",
+    "spin-the-wheel": "Spin The Wheel",
+    "coin-flip-dice-roll": "Coin Flip & Dice Roll"
+  };
+
+  const select = document.getElementById("appSelect");
+  const value = map[appParam.toLowerCase()];
+
+  if (value) {
+    select.value = value;
+  }
+}
+</script>
+
+</body>
+</html>
